@@ -8,7 +8,7 @@ Creating a form that a user can enter in the Name, Hp, Att, Def, and Image for a
 **Pokemon Data:**
 
 | Name | Hp | Att | Def | Images |
-| --- | --- | :---: |
+| --- | --- | --- | --- | :---: |
 | Charizard | 78 | 84 | 78 | images/charizard.png |
 | Pikachu | 45 | 80 | 50 | images/pikachu.png |
 | Eevee | 55 | 55 | 50 | images/eevee.png |
