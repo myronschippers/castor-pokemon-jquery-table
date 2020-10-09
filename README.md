@@ -20,6 +20,8 @@ Creating a form that a user can enter in the Name, Hp, Att, Def, and Image for a
 
 ## Table Structure
 
+The following is going to be how to structure a table in HTML. The content of a table is structured in rows and cells. These different parts are outlined below.
+
 ---
 **Table Parts:**
 
@@ -32,7 +34,43 @@ Creating a form that a user can enter in the Name, Hp, Att, Def, and Image for a
 1. `colspan` - an attribute that can be placed only on a `<td>` tag in order to have the cell stretch across a certain number of cells/columns
 
 ---
-**Full Table:**
+**Actual Table:**
+
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Hp</td>
+      <td>Att</td>
+      <td>Def</td>
+      <td>Image</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Charizard</td>
+      <td>78</td>
+      <td>84</td>
+      <td>78</td>
+      <td>
+        <img src="images/charizard.png" alt="Charizard" />
+      </td>
+      <td>
+        <button>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4"></td>
+      <td colspan="2">Total Attack: 500</td>
+    </tr>
+  </tfoot>
+</table>
+
+---
+**Table Markup:**
 
 ```HTML
 <table>
