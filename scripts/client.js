@@ -28,6 +28,7 @@ function clickToAdd() {
     att,
     def,
     image,
+    isSelected: false,
   };
   pokemonList.push(pokemon);
   render();
@@ -35,10 +36,15 @@ function clickToAdd() {
 
 function selectPokemon() {
   console.log(selectPokemon);
+  const index = $(this).data('index'); // data-
+  pokemonList[index].isSelected = true;
+
   $(this)
     .parent() // td
     .parent() // tr
     .addClass('isSelected');
+
+  addSelectedAtt();
 }
 
 function render() {
@@ -48,30 +54,8 @@ function render() {
     console.log('Render', pokemonList[i]);
     const item = pokemonList[i];
 
+    // check if selected
     attTotal += parseInt(item.att);
-
-    // $('.js-pokemon-list').append(
-    //   '<tr>' +
-    //     '<td>' +
-    //     item.name +
-    //     '</td>' +
-    //     '<td>' +
-    //     item.hp +
-    //     '</td>' +
-    //     '<td>' +
-    //     item.att +
-    //     '</td>' +
-    //     '<td>' +
-    //     item.def +
-    //     '</td>' +
-    //     '<td>' +
-    //     '<img src="' +
-    //     item.image +
-    //     '" />' +
-    //     '</td>' +
-    //     '<td><button>Select</button></td>' +
-    //     '</tr>'
-    // );
 
     $('.js-pokemon-list').append(
       `<tr>
@@ -80,9 +64,24 @@ function render() {
         <td>${item.att}</td>
         <td>${item.def}</td>
         <td><img src="${item.image}" /></td>
-        <td><button class="js-btn-select">Select</button></td>
+        <td><button class="js-btn-select" data-index="${i}">Select</button></td>
       </tr>`
     );
+  }
+
+  $('.js-total-att').text(attTotal);
+}
+
+function addSelectedAtt() {
+  let attTotal = 0;
+
+  for (let i = 0; i < pokemonList.length; i++) {
+    const item = pokemonList[i];
+
+    // check if selected
+    if (item.isSelected) {
+      attTotal += parseInt(item.att);
+    }
   }
 
   $('.js-total-att').text(attTotal);
