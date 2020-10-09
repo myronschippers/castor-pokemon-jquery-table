@@ -106,3 +106,25 @@ The following is going to be how to structure a table in HTML. The content of a 
   </tfoot>
 </table>
 ```
+
+## Adding a New Pokemon to the Table
+
+When adding a new Pokemon to the table a new item is represented by a full row with all appropriate columns. Each row in a table represents an individual item.
+
+---
+**Single Item:**
+
+```HTML
+<tr>
+  <td>Charizard</td>
+  <td>78</td>
+  <td>84</td>
+  <td>78</td>
+  <td>
+    <img src="images/charizard.png" />
+  </td>
+  <td>
+    <button>Delete</button>
+  </td>
+</tr>
+```
