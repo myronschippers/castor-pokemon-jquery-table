@@ -94,7 +94,7 @@ The following is going to be how to structure a table in HTML. The content of a 
         <img src="images/charizard.png" alt="Charizard" />
       </td>
       <td>
-        <button>Delete</button>
+        <button>Select</button>
       </td>
     </tr>
   </tbody>
@@ -124,7 +124,7 @@ When adding a new Pokemon to the table a new item is represented by a full row w
     <img src="images/charizard.png" />
   </td>
   <td>
-    <button>Delete</button>
+    <button>Select</button>
   </td>
 </tr>
 ```
