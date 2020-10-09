@@ -1,0 +1,10 @@
+html,
+body {
+  margin: 0;
+}
+
+.appBar {
+  padding: 15px 25px;
+  background-color: royalblue;
+  color: #efefef;
+}
