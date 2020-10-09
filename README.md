@@ -54,7 +54,7 @@ The following is going to be how to structure a table in HTML. The content of a 
       <td>84</td>
       <td>78</td>
       <td>
-        <img src="images/charizard.png" alt="Charizard" />
+        <img src="images/charizard.png" width="100px" alt="Charizard" />
       </td>
       <td>
         <button>Delete</button>
