@@ -61,12 +61,12 @@ function render() {
 
     $('.js-pokemon-list').append(
       `<tr>
-          <td>${item.name}</td>
-          <td>${item.hp}</td>
-          <td>${item.att}</td>
-          <td>${item.def}</td>
-          <td><img src="${item.image}" /></td>
-          <td><button>Select</button></td>
+        <td>${item.name}</td>
+        <td>${item.hp}</td>
+        <td>${item.att}</td>
+        <td>${item.def}</td>
+        <td><img src="${item.image}" /></td>
+        <td><button>Select</button></td>
       </tr>`
     );
   }
