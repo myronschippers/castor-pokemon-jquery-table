@@ -37,7 +37,23 @@ function render() {
     const item = pokemonList[i];
 
     $('.js-pokemon-list').append(
-      '<li>' + item.name + ', ' + 'HP: ' + item.hp + '</li>'
+      '<tr>' +
+        '<td>' +
+        item.name +
+        '</td>' +
+        '<td>' +
+        item.hp +
+        '</td>' +
+        '<td>' +
+        item.att +
+        '</td>' +
+        '<td>' +
+        item.def +
+        '</td>' +
+        '<td>' +
+        item.image +
+        '</td>' +
+        '</tr>'
     );
   }
 }

@@ -16,3 +16,12 @@ body {
 .btn {
   margin: 10px 0;
 }
+
+.simpleTable {
+  border-collapse: collapse;
+}
+
+.simpleTable td {
+  padding: 6px 10px;
+  border: 1px solid #333333;
+}
