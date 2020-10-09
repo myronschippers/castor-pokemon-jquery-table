@@ -36,7 +36,8 @@ function clickToAdd() {
 
 function selectPokemon() {
   console.log(selectPokemon);
-  const index = $(this).data('index'); // data-
+  // data attribute
+  const index = $(this).data('index'); // data-index
   pokemonList[index].isSelected = true;
 
   $(this)
@@ -49,13 +50,9 @@ function selectPokemon() {
 
 function render() {
   $('.js-pokemon-list').empty();
-  let attTotal = 0;
   for (let i = 0; i < pokemonList.length; i++) {
     console.log('Render', pokemonList[i]);
     const item = pokemonList[i];
-
-    // check if selected
-    attTotal += parseInt(item.att);
 
     $('.js-pokemon-list').append(
       `<tr>
@@ -68,8 +65,6 @@ function render() {
       </tr>`
     );
   }
-
-  $('.js-total-att').text(attTotal);
 }
 
 function addSelectedAtt() {
