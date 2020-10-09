@@ -7,7 +7,10 @@ $(document).ready(onReady);
 function onReady() {
   console.log('Stuff is ready');
 
+  // event listener for targeted element
   $('.js-click-add').on('click', clickToAdd);
+  // event listener for children of targeted element
+  $('.js-pokemon-list').on('click', '.js-btn-select', selectPokemon);
 }
 
 function clickToAdd() {
@@ -28,6 +31,14 @@ function clickToAdd() {
   };
   pokemonList.push(pokemon);
   render();
+}
+
+function selectPokemon() {
+  console.log(selectPokemon);
+  $(this)
+    .parent() // td
+    .parent() // tr
+    .addClass('isSelected');
 }
 
 function render() {
@@ -66,7 +77,7 @@ function render() {
         <td>${item.att}</td>
         <td>${item.def}</td>
         <td><img src="${item.image}" /></td>
-        <td><button>Select</button></td>
+        <td><button class="js-btn-select">Select</button></td>
       </tr>`
     );
   }
