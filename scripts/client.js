@@ -51,8 +51,11 @@ function render() {
         item.def +
         '</td>' +
         '<td>' +
+        '<img src="' +
         item.image +
+        '" />' +
         '</td>' +
+        '<td><button>Select</button></td>' +
         '</tr>'
     );
   }
