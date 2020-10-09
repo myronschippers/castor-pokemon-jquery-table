@@ -27,4 +27,17 @@ function clickToAdd() {
     image,
   };
   pokemonList.push(pokemon);
+  render();
+}
+
+function render() {
+  $('.js-pokemon-list').empty();
+  for (let i = 0; i < pokemonList.length; i++) {
+    console.log('Render', pokemonList[i]);
+    const item = pokemonList[i];
+
+    $('.js-pokemon-list').append(
+      '<li>' + item.name + ', ' + 'HP: ' + item.hp + '</li>'
+    );
+  }
 }
