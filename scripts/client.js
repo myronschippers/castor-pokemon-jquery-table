@@ -1,5 +1,7 @@
 console.log('Pokemon');
 
+const pokemonList = [];
+
 $(document).ready(onReady);
 
 function onReady() {
@@ -15,7 +17,14 @@ function clickToAdd() {
   const att = $('.js-field-att').val();
   const def = $('.js-field-def').val();
   const image = $('.js-field-image').val();
-  console.log(name, hp, att, def, image);
 
   // store pokemon data
+  const pokemon = {
+    name,
+    hp: hp,
+    att,
+    def,
+    image,
+  };
+  pokemonList.push(pokemon);
 }
